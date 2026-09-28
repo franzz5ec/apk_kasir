@@ -1,0 +1,107 @@
+/* ==========================================================================
+   KASIRKU - SISTEM KASIR & PENCATATAN KEUANGAN
+   Theme: Black, Neon Blue & Glassmorphism
+   ========================================================================== */
+
+:root {
+  --bg-color: #080c14;
+  --bg-card: rgba(13, 20, 36, 0.75);
+  --border-neon: rgba(56, 189, 248, 0.25);
+  --neon-blue: #00f0ff;
+  --primary-blue: #0284c7;
+  --accent-cyan: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-neon);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-input {
+  background: rgba(8, 14, 28, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+  outline: none;
+  background: rgba(10, 18, 36, 0.95);
+  color: #fff;
+}
+
+/* Neon Glow Button */
+.neon-btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #00f0ff 100%);
+  color: #040c1a !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.neon-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.7);
+  color: #000 !important;
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
+/* Sidebar navigation */
+.sidebar-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--neon-blue);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Print Optimization */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print, nav, aside, .btn-print-hide {
+    display: none !important;
+  }
+  .glass-panel {
+    background: #ffffff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+  }
+}

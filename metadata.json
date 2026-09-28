@@ -1,0 +1,6 @@
+{
+  "name": "KASIRKU - Sistem Kasir & Pencatatan Keuangan",
+  "description": "Aplikasi kasir online & pencatatan keuangan modern berbasis Supabase PostgreSQL & GitHub Pages dengan tema Neon Blue Glassmorphism.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
